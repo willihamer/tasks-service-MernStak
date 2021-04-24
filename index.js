@@ -11,10 +11,10 @@ connectDB();
 app.use(cors());
 
 // ENABLE EXPRESS.JSON
-app.use(express.json({extended: true}));
+app.use(express.json({ extended: true }));
 
 // APP PORT
-const PORT = process.env.PORT || 4000;
+const port = process.env.port || 4000;
 
 // IMPORT ROUTES
 app.use('/api/users', require('./routes/users'));
@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
     res.send('Hello World')
 });
 
-app.listen(PORT, () => {
-    console.log(`THE SERVER IS ON IN PORT ${PORT}`);
+app.listen(port, '0.0.0.0', () => {
+    console.log(`THE SERVER IS ON IN PORT ${port}`);
 });
 
