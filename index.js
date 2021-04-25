@@ -30,7 +30,7 @@ app.use(function (req, res, next) {
 app.use(express.json({ extended: true }));
 
 // APP PORT
-const PORT = process.env.PORT || 4000;
+const port = process.env.PORT || 4000;
 
 // IMPORT ROUTES
 app.use('/api/users', require('./routes/users'));
@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
     res.send('Hello World')
 });
 
-app.listen(PORT, '0.0.0.0', () => {
-    console.log(`THE SERVER IS ON IN PORT ${PORT}`);
+app.listen(port, '0.0.0.0', () => {
+    console.log(`THE SERVER IS ON IN PORT ${port}`);
 });
 
