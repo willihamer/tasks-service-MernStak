@@ -9,7 +9,7 @@ const app = express();
 connectDB();
 
 var corsOptions = {
-    "origin": "https://tasksmernhh.netlify.app/",
+    "origin": "https://tasksmernhh.netlify.app",
     "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
     "preflightContinue": false,
     "optionsSuccessStatus": 204
