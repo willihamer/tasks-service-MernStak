@@ -9,22 +9,13 @@ const app = express();
 connectDB();
 
 var corsOptions = {
-    "origin": "*",
+    "origin": "https://tasksmernhh.netlify.app/",
     "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
     "preflightContinue": false,
     "optionsSuccessStatus": 204
 }
 
 app.use(cors(corsOptions));
-
-// app.use(function (req, res, next) {
-//     res.setHeader('Access-Control-Allow-Origin', '*');
-//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-//     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-//     res.setHeader('Access-Control-Allow-Credentials', true);
-//     next();
-// })
-
 
 // ENABLE EXPRESS.JSON
 app.use(express.json({ extended: true }));
